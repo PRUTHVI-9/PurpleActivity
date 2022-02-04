@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <androidx.appcompat.widget.SearchView
+        android:layout_width="match_parent"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:layout_marginTop="40dp"
+        android:layout_height="wrap_content">
+    </androidx.appcompat.widget.SearchView>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:text="Top Brands"
+        android:layout_marginLeft="10dp"
+        android:textAllCaps="true"
+        android:textSize="20dp"
+        android:layout_height="wrap_content">
+
+    </TextView>
+    <TextView
+        android:layout_width="match_parent"
+        android:text="Maybelline"
+        android:layout_marginLeft="80dp"
+        android:textSize="15dp"
+        android:textColor="@android:color/black"
+        android:layout_marginTop="25dp"
+        android:layout_height="wrap_content">
+
+    </TextView>
+    <TextView
+        android:layout_width="match_parent"
+        android:text="Lakme"
+        android:layout_marginLeft="80dp"
+        android:textSize="15dp"
+        android:textColor="@android:color/black"
+        android:layout_marginTop="15dp"
+        android:layout_height="wrap_content">
+
+    </TextView>
+    <TextView
+        android:layout_width="match_parent"
+        android:text="Biotique"
+        android:layout_marginLeft="80dp"
+        android:textSize="15dp"
+        android:textColor="@android:color/black"
+        android:layout_marginTop="15dp"
+        android:layout_height="wrap_content">
+
+    </TextView>
+    <TextView
+        android:layout_width="match_parent"
+        android:text="Good Vibes"
+        android:layout_marginLeft="80dp"
+        android:textSize="15dp"
+        android:textColor="@android:color/black"
+        android:layout_marginTop="15dp"
+        android:layout_height="wrap_content">
+
+    </TextView>
+    <TextView
+        android:layout_width="match_parent"
+        android:text="Plum"
+        android:layout_marginLeft="80dp"
+        android:textSize="15dp"
+        android:textColor="@android:color/black"
+        android:layout_marginTop="15dp"
+        android:layout_height="wrap_content">
+
+    </TextView>
+    <TextView
+        android:layout_width="match_parent"
+        android:text="Sugar"
+        android:layout_marginLeft="80dp"
+        android:textSize="15dp"
+        android:textColor="@android:color/black"
+        android:layout_marginTop="15dp"
+        android:layout_height="wrap_content">
+
+    </TextView>
+    <TextView
+        android:layout_width="match_parent"
+        android:text="NY Bae"
+        android:layout_marginLeft="80dp"
+        android:textSize="15dp"
+        android:textColor="@android:color/black"
+        android:layout_marginTop="15dp"
+        android:layout_height="wrap_content">
+
+    </TextView>
+    <TextView
+        android:layout_width="match_parent"
+        android:text="L'Oreal Paris"
+        android:layout_marginLeft="80dp"
+        android:textSize="15dp"
+        android:textColor="@android:color/black"
+        android:layout_marginTop="15dp"
+        android:layout_height="wrap_content">
+
+    </TextView>
+
+
+
+</LinearLayout>

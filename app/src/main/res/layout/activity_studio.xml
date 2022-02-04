@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@android:color/white"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="90dp"
+            android:fontFamily="@font/abril_fatface"
+            android:text="Offers_________"
+            android:textColor="#8D039C"
+            android:textSize="30dp"></TextView>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="180dp"
+            android:fontFamily="@font/abril_fatface"
+            android:text="FOR YOU"
+            android:textColor="#8D039C"
+            android:textSize="30dp">
+
+        </TextView>
+
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/offerlist"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+        </androidx.recyclerview.widget.RecyclerView>
+
+
+        <androidx.viewpager2.widget.ViewPager2
+            android:id="@+id/vp_offers"
+            android:layout_width="match_parent"
+            android:orientation="horizontal"
+            android:layout_height="300dp">
+
+        </androidx.viewpager2.widget.ViewPager2>
+        
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:gravity="center_horizontal|center_vertical"
+            android:orientation="horizontal"
+            android:id="@+id/dots_container">
+
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:paddingLeft="10dp"
+            android:text="Offers"
+            android:textSize="30dp" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/discounts"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+        </androidx.recyclerview.widget.RecyclerView>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/bumper"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+        </androidx.recyclerview.widget.RecyclerView>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:paddingLeft="10dp"
+            android:text="BEST SELLERS"
+            android:textSize="30dp">
+
+        </TextView>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/best"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+        </androidx.recyclerview.widget.RecyclerView>
+
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:gravity="center"
+            android:paddingLeft="10dp"
+            android:text="________FEATURED________"
+            android:textSize="30dp">
+
+        </TextView>
+
+
+    </LinearLayout>
+
+
+</ScrollView>
+
+
+
+
+
+

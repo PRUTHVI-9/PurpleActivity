@@ -1,0 +1,329 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@android:color/holo_blue_bright">
+
+        <TextView
+            android:id="@+id/parple"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_marginLeft="20dp"
+            android:text="Purple.com"
+            android:textColor="@color/purple_200"
+            android:textSize="40dp">
+
+        </TextView>
+
+        <ImageView
+            android:id="@+id/smile"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="20dp"
+            android:src="@drawable/smile">
+
+        </ImageView>
+
+
+        <ImageView
+            android:id="@+id/cart"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_toLeftOf="@+id/smile"
+            android:src="@drawable/cart">
+
+        </ImageView>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/search_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/title">
+
+        <androidx.appcompat.widget.SearchView
+            android:id="@+id/search"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp">
+
+        </androidx.appcompat.widget.SearchView>
+
+    </RelativeLayout>
+
+    <HorizontalScrollView
+        android:id="@+id/scrollable"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/search_bar">
+
+        <RelativeLayout
+            android:id="@+id/makeup_list"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/search_bar">
+
+            <LinearLayout
+                android:padding="15dp"
+                android:id="@+id/one"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:layout_marginLeft="10dp">
+
+                <ImageView
+                    android:id="@+id/makeup"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@mipmap/make">
+
+                </ImageView>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/makeup"
+                    android:gravity="center"
+                    android:text="Makeup"
+                    android:textColor="@android:color/black"
+                    android:textSize="15dp">
+
+                </TextView>
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/two"
+                android:padding="15dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@+id/one"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:layout_marginLeft="10dp">
+
+                <ImageView
+                    android:id="@+id/Skin_care"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@+id/makeup"
+                    android:src="@mipmap/makeup">
+
+                </ImageView>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/Skin_care"
+                    android:gravity="center"
+                    android:text="Skin care"
+                    android:textColor="@android:color/black"
+                    android:textSize="15dp">
+
+                </TextView>
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/three"
+                android:padding="15dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@+id/two"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:layout_marginLeft="10dp">
+
+                <ImageView
+                    android:id="@+id/Haircare"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@+id/Skin_care"
+                    android:src="@mipmap/haircare">
+
+                </ImageView>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/Haircare"
+                    android:gravity="center"
+                    android:text="Hair care"
+                    android:textColor="@android:color/black"
+                    android:textSize="15dp">
+
+                </TextView>
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:id="@+id/four"
+                android:padding="15dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@+id/three"
+                android:gravity="center"
+                android:orientation="vertical">
+
+
+                <ImageView
+                    android:id="@+id/Personal_care"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@+id/Haircare"
+                    android:src="@mipmap/personal">
+
+                </ImageView>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="Personal care"
+                    android:textColor="@android:color/black"
+                    android:textSize="15dp">
+
+                </TextView>
+
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:id="@+id/five"
+                android:padding="15dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@+id/four"
+                android:gravity="center"
+                android:orientation="vertical">
+
+
+                <ImageView
+                    android:id="@+id/Clearance_Sale"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@mipmap/clearance">
+                </ImageView>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="Clearance Sale"
+                    android:textColor="@android:color/black"
+                    android:textSize="15dp">
+
+                </TextView>
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:id="@+id/six"
+                android:padding="15dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@+id/five"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:id="@+id/offers"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@mipmap/offers">
+                </ImageView>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="Offers"
+                    android:textColor="@android:color/black"
+                    android:textSize="15dp">
+
+                </TextView>
+
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:id="@+id/seven"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@+id/six"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:padding="15dp">
+
+                <ImageView
+                    android:id="@+id/discount"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@mipmap/discount"></ImageView>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="Discount Offers"
+                    android:textColor="@android:color/black"
+                    android:textSize="15dp">
+
+                </TextView>
+
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:id="@+id/eight"
+                android:padding="15dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@+id/seven"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:id="@+id/brands"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@mipmap/brands">
+                </ImageView>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="Brands"
+                    android:textColor="@android:color/black"
+                    android:textSize="15dp"></TextView>
+
+            </LinearLayout>
+
+
+        </RelativeLayout>
+
+
+    </HorizontalScrollView>
+
+
+</RelativeLayout>
