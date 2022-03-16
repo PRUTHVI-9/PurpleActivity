@@ -10,6 +10,14 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.PurpleActivity">
         <activity
+            android:name=".DrawerActivity"
+            android:exported="true"
+            android:label="@string/title_activity_drawer"
+            android:theme="@style/Theme.PurpleActivity.NoActionBar" />
+        <activity
+            android:name=".ViewPagerActivity"
+            android:exported="true" />
+        <activity
             android:name=".TabActivity"
             android:exported="true" />
         <activity
@@ -22,7 +30,10 @@
             android:name=".CategoriesActivity"
             android:exported="true" />
         <activity
-            android:name=".ViewPagerActivity"
+            android:name=".MainActivity"
+            android:exported="true" />
+        <activity
+            android:name=".SplashActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

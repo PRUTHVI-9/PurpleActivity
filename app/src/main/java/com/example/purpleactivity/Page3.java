@@ -1,16 +1,25 @@
 package com.example.purpleactivity;
 
+import android.graphics.Color;
+import android.os.Build;
 import android.os.Bundle;
+import android.text.Html;
+import android.util.Log;
+import android.view.DragEvent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.LinearLayout;
+import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
+import androidx.annotation.RequiresApi;
 import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
+import androidx.viewpager2.widget.ViewPager2;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -20,13 +29,26 @@ public class Page3 extends Fragment {
     RecyclerView discunts;
     RecyclerView bumper;
     RecyclerView best;
+    ViewPager2 vp_offers;
+    LinearLayout dots_container;
+    private String TAG=getClass().getSimpleName();
+    int [] List;
+    @Override
+    public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
+        super.onViewCreated(view, savedInstanceState);
+        setDot(0,List);
 
+    }
+
+    @RequiresApi(api = Build.VERSION_CODES.M)
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         View view= LayoutInflater.from(getContext()).inflate(R.layout.activity_studio,container,false);
         offerList = view.findViewById(R.id.offerlist);
         discunts = view.findViewById(R.id.discounts);
+        vp_offers = view.findViewById(R.id.vp_offers);
+        dots_container = view.findViewById(R.id.dots_container);
         bumper = view.findViewById(R.id.bumper);
         best = view.findViewById(R.id.best);
         RecyclerView.LayoutManager manager  = new LinearLayoutManager(getContext(),LinearLayoutManager.HORIZONTAL,false);
@@ -84,8 +106,44 @@ public class Page3 extends Fragment {
         best.setAdapter(adapter);
 
 
+       List = new int[5];
+        List[0]= (R.drawable.s1);
+        List[1]= (R.drawable.s2);
+        List[2]= (R.drawable.s3);
+        List[3]= (R.drawable.s5);
+        List[4]= (R.drawable.s6);
 
-
+        SliderAdapter adapter1 = new SliderAdapter(List);
+        vp_offers.setAdapter(adapter1);
+        vp_offers.registerOnPageChangeCallback(new ViewPager2.OnPageChangeCallback() {
+            @Override
+            public void onPageScrolled(int position, float positionOffset, int positionOffsetPixels) {
+                super.onPageScrolled(position, positionOffset, positionOffsetPixels);
+                setDot(position,List);
+                Log.e(TAG, "onPageScrolled: "+position );
+            }
+        });
         return view;
+    }
+
+    private void setDot(int position, int[] List) {
+        int total = List.length;
+        dots_container.removeAllViews();
+        TextView[] list = new TextView[List.length];
+        Log.e(TAG, "setDot: "+position );
+        for (int i=0; i<total;i++){
+            list[position] = new TextView(getContext());
+            list[position].setText(Html.fromHtml("&#9679"));
+            if (i == position){
+                list[position].setTextColor(getResources().getColor(R.color.purple_200));
+            }
+            else {
+                list[position].setTextColor(getResources().getColor(android.R.color.darker_gray));
+            }
+            dots_container.addView(list[position]);
+
+        }
+        Log.e(TAG, "setDot:position "+position );
+        Log.e(TAG, "setDot:length "+List.length );
     }
 }
